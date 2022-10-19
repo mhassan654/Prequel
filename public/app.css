@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.2 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -164,6 +164,7 @@ select,
 textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
   color: inherit; /* 1 */
   margin: 0; /* 2 */
@@ -372,15 +373,9 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
-}
-
 *, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -424,41 +419,102 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
-  width: 100%;
-}
-@media (min-width: 640px) {
 
-  .container {
-    max-width: 640px;
-  }
+::-webkit-backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
-@media (min-width: 768px) {
 
-  .container {
-    max-width: 768px;
-  }
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
-  }
-}
-.right-2 {
-  right: 0.5rem;
+.absolute {
+  position: absolute;
 }
 .m-2 {
   margin: 0.5rem;
@@ -470,20 +526,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-1 {
   margin-right: 0.25rem;
 }
-.ml-1 {
-  margin-left: 0.25rem;
-}
 .mr-4 {
   margin-right: 1rem;
 }
-.mr-2 {
-  margin-right: 0.5rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 .-mt-1 {
   margin-top: -0.25rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 .block {
   display: block;
@@ -497,6 +547,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .table-row {
   display: table-row;
 }
+.grid {
+  display: grid;
+}
 .hidden {
   display: none;
 }
@@ -506,11 +559,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-10 {
   height: 2.5rem;
 }
-.w-1 {
-  width: 0.25rem;
-}
 .w-1\/5 {
   width: 20%;
+}
+.w-full {
+  width: 100%;
+}
+.w-1 {
+  width: 0.25rem;
 }
 .w-10 {
   width: 2.5rem;
@@ -521,8 +577,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-2\/5 {
   width: 40%;
 }
-.grow {
-  flex-grow: 1;
+.w-1\/2 {
+  width: 50%;
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -536,11 +592,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .resize {
   resize: both;
 }
-.flex-row {
-  flex-direction: row;
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.flex-wrap {
-  flex-wrap: wrap;
+.flex-col {
+  flex-direction: column;
 }
 .items-center {
   align-items: center;
@@ -551,8 +607,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .overflow-hidden {
   overflow: hidden;
 }
-.break-words {
-  overflow-wrap: break-word;
+.text-ellipsis {
+  text-overflow: ellipsis;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -575,21 +631,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .text-center {
   text-align: center;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.font-bold {
-  font-weight: 700;
 }
 .font-normal {
   font-weight: 400;
 }
 .font-light {
   font-weight: 300;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
@@ -605,9 +672,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-logo {
   color: var(--logo-text-color);
 }
-.text-indigo-800 {
+.text-purple-800 {
   --tw-text-opacity: 1;
-  color: rgb(55 48 163 / var(--tw-text-opacity));
+  color: rgb(107 33 168 / var(--tw-text-opacity));
 }
 .text-tableHeader {
   color: var(--table-header-text-color);
@@ -615,9 +682,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-secondary {
   color: var(--text-secondary-color);
 }
-.text-gray-500 {
+.text-gray-200 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 .text-gray-700 {
   --tw-text-opacity: 1;
@@ -652,129 +719,229 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 :root {
-    --scroll-track                          : rgb(245, 245, 245);
-    --scroll-bar                            : rgb(102, 126, 234);
-    --main-content                          : rgb(255, 255, 255);
-    --column-border                         : rgba(0, 0, 0, 0);
-    --table-item-overview                   : rgba(0, 0, 0, 0);
-    --table-item-text                       : rgb(113, 128, 150);
-    --list-header-text                      : rgb(74, 85, 104);
-    --border-color                          : rgb(226, 232, 240);
-    --button-background                     : rgb(102, 126, 234);
-    --button-background-hover               : rgb(105, 136, 247);
-    --button-background-active              : rgb(102, 126, 234);
-    --button-background-light               : rgb(151, 179, 237);
-    --button-background-light-hover         : rgb(163, 191, 249);
-    --button-background-light-active        : rgb(167, 195, 255);
+    --scroll-track: rgb(245, 245, 245);
+    --scroll-bar: rgb(170, 145, 189);
+    --main-content: rgb(255, 255, 255);
+    --column-border: rgba(0, 0, 0, 0);
+    --table-item-overview: rgba(0, 0, 0, 0);
+    --table-item-text: rgb(113, 128, 150);
+    --list-header-text: rgb(74, 85, 104);
+    --border-color: rgb(226, 232, 240);
+    --button-background: rgb(192, 132, 252);
+    --button-background-hover: rgb(190, 143, 238);
+    --button-background-active: rgb(196, 161, 232);
+    --button-background-light: rgb(176, 142, 210);
+    --button-background-light-hover: rgb(196, 161, 232);
+    --button-background-light-active: rgb(196, 161, 232);
 
-    --manage-navbar-bg                      : rgb(247, 250, 252);
-    --manage-navbar-inactive-text-color     : rgb(163, 191, 250);
-    --manage-navbar-inactive-bg-hover-color : rgb(235, 244, 255);
+    --manage-navbar-bg: rgb(247, 250, 252);
+    --manage-navbar-inactive-text-color: rgb(163, 191, 250);
+    --manage-navbar-inactive-bg-hover-color: rgb(235, 244, 255);
 
-    --page-background-color                 : rgb(237, 241, 243);
-    --component-background-color            : rgb(255, 255, 255);
-    --logo-text-color                       : rgb(0, 0, 0);
-    --table-column-background-color         : rgb(226, 232, 240);
-    --table-row-even-background-color       : rgb(237, 242, 247);
-    --table-row-odd-background-color        : rgb(247, 250, 252);
-    --table-header-text-color               : rgb(45, 55, 72);
-    --table-hover-background-color          : rgb(226, 232, 240);
-    --header-text-color                     : rgb(0, 0, 0);
-    --input-background-color                : rgb(255, 255, 255);
-    --input-border                          : '';
-    --dropdown-background-color             : var(--input-background-color);
-    --text-secondary-color                  : rgb(74, 85, 104);
-    --text-secondary-color-invert           : rgb(255, 255, 255);
+    --page-background-color: rgb(237, 241, 243);
+    --component-background-color: rgb(255, 255, 255);
+    --logo-text-color: rgb(0, 0, 0);
+    --table-column-background-color: rgb(226, 232, 240);
+    --table-row-even-background-color: rgb(237, 242, 247);
+    --table-row-odd-background-color: rgb(247, 250, 252);
+    --table-header-text-color: rgb(45, 55, 72);
+    --table-hover-background-color: rgb(226, 232, 240);
+    --header-text-color: rgb(23, 23, 23);
+    --input-background-color: rgb(255, 255, 255);
+    --input-border: '';
+    --dropdown-background-color: var(--input-background-color);
+    --text-secondary-color: rgb(74, 85, 104);
+    --text-secondary-color-invert: rgb(255, 255, 255);
 }
 
 .theme-dark {
-    --scroll-track                          : rgb(28, 28, 28);
-    --scroll-bar                            : rgb(90, 103, 216);
-    --main-content                          : rgb(66, 66, 66);
-    --column-border                         : rgb(74, 85, 104);
-    --table-item-overview                   : rgb(45, 45, 45);
-    --table-item-text                       : rgb(161, 178, 205);
-    --list-header-text                      : rgb(212, 223, 230);
-    --border-color                          : rgb(84, 84, 84);
-    --button-background                     : rgb(57, 79, 177);
-    --button-background-hover               : rgb(60, 82, 202);
-    --button-background-active              : rgb(66, 91, 192);
-    --button-background-light               : rgb(97, 118, 161);
-    --button-background-light-hover         : rgb(108, 132, 180);
-    --button-background-light-active        : rgb(107, 133, 184);
+    --scroll-track: rgb(28, 28, 28);
+    --scroll-bar: rgb(170, 145, 189);
+    --main-content: rgb(66, 66, 66);
+    --column-border: rgb(74, 85, 104);
+    --table-item-overview: rgb(45, 45, 45);
+    --table-item-text: rgb(161, 178, 205);
+    --list-header-text: rgb(212, 223, 230);
+    --border-color: rgb(84, 84, 84);
+    --button-background: rgb(192, 132, 252);
+    --button-background-hover: rgb(190, 143, 238);
+    --button-background-active: rgb(196, 161, 232);
+    --button-background-light: rgb(196, 161, 232);
+    --button-background-light-hover: rgb(196, 161, 232);
+    --button-background-light-active: rgb(196, 161, 232);
 
-    --manage-navbar-bg                      : rgb(103, 103, 103);
-    --manage-navbar-inactive-text-color     : rgb(208, 208, 208);
-    --manage-navbar-inactive-bg-hover-color : rgb(130, 130, 130);
+    --manage-navbar-bg: rgb(103, 103, 103);
+    --manage-navbar-inactive-text-color: rgb(208, 208, 208);
+    --manage-navbar-inactive-bg-hover-color: rgb(130, 130, 130);
 
-    --logo-text-color                       : rgb(226, 237, 244);
-    --page-background-color                 : rgb(28, 28, 28);
-    --component-background-color            : rgb(38, 37, 37);
-    --table-column-background-color         : rgb(24, 24, 24);
-    --table-row-even-background-color       : rgb(51, 50, 50);
-    --table-row-odd-background-color        : rgb(38, 37, 37);
-    --table-hover-background-color          : rgb(60, 60, 60);
-    --header-text-color                     : rgb(226, 237, 244);
-    --input-background-color                : rgb(36, 36, 36);
-    --dropdown-background-color             : var(--input-background-color);
-    --input-border                          : border-none;
-    --table-header-text-color               : rgb(226, 237, 244);
-    --text-secondary-color                  : rgb(226, 237, 244);
-    --text-secondary-color-invert           : rgb(74, 85, 104);
-
+    --logo-text-color: rgb(226, 237, 244);
+    --page-background-color: rgb(28, 28, 28);
+    --component-background-color: rgb(38, 37, 37);
+    --table-column-background-color: rgb(24, 24, 24);
+    --table-row-even-background-color: rgb(51, 50, 50);
+    --table-row-odd-background-color: rgb(38, 37, 37);
+    --table-hover-background-color: rgb(60, 60, 60);
+    --header-text-color: rgb(226, 237, 244);
+    --input-background-color: rgb(36, 36, 36);
+    --dropdown-background-color: var(--input-background-color);
+    --input-border: border-none;
+    --table-header-text-color: rgb(226, 237, 244);
+    --text-secondary-color: rgb(226, 237, 244);
+    --text-secondary-color-invert: rgb(74, 85, 104);
 }
 
 * {
-    transition  : .150ms ease;
-    font-family : Nunito, serif;
-    outline     : none !important;
+    font-family: sans-serif;
+    outline: none !important;
 }
 
 body {
     background: var(--page-background-color);
 }
+
 .prequel-swal-title {
-    color : red;
+    color: red;
 }
 
 :focus {
-    outline : 0;
+    outline: 0;
 }
 
 ::-webkit-scrollbar {
-    width            : 5px;
-    height           : 5px;
-    background-color : rgb(245, 245, 245);
-    -webkit-transition       : .2s ease;
-    transition       : .2s ease;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(245, 245, 245);
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow : inset 0 0 2px rgba(0, 0, 0, 0.3);
-    background-color   : var(--scroll-track);
-    border-radius      : 1px;
-    -webkit-transition         : .2s ease;
-    transition         : .2s ease;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    background-color: var(--scroll-track);
+    border-radius: 1px;
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius : 10px;
-    background    : var(--scroll-bar);
-    -webkit-transition    : .2s ease;
-    transition    : .2s ease;
+    border-radius: 10px;
+    background: var(--scroll-bar);
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
 }
 
 .no-drag {
-    user-select         : none;
-    -moz-user-select    : none;
-    -webkit-user-drag   : none;
-    -webkit-user-select : none;
-    -ms-user-select     : none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-.hover\:bg-indigo-100:hover {
+code[class*=language-], pre[class*=language-] {
+    color: #000;
+    background: 0 0;
+    text-shadow: 0 1px #fff;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+code[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+code[class*=language-] ::selection, code[class*=language-]::selection, pre[class*=language-] ::selection, pre[class*=language-]::selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+@media print {
+    code[class*=language-], pre[class*=language-] {
+        text-shadow: none
+    }
+}
+
+pre[class*=language-] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto
+}
+
+:not(pre) > code[class*=language-], pre[class*=language-] {
+    background: #f5f2f0
+}
+
+:not(pre) > code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal
+}
+
+.token.cdata, .token.comment, .token.doctype, .token.prolog {
+    color: #708090
+}
+
+.token.punctuation {
+    color: #999
+}
+
+.token.namespace {
+    opacity: .7
+}
+
+.token.boolean, .token.constant, .token.deleted, .token.number, .token.property, .token.symbol, .token.tag {
+    color: #905
+}
+
+.token.attr-name, .token.builtin, .token.char, .token.inserted, .token.selector, .token.string {
+    color: #690
+}
+
+.language-css .token.string, .style .token.string, .token.entity, .token.operator, .token.url {
+    color: #9a6e3a;
+    background: hsla(0, 0%, 100%, .5)
+}
+
+.token.atrule, .token.attr-value, .token.keyword {
+    color: #07a
+}
+
+.token.class-name, .token.function {
+    color: #dd4a68
+}
+
+.token.important, .token.regex, .token.variable {
+    color: #e90
+}
+
+.token.bold, .token.important {
+    font-weight: 700
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.token.entity {
+    cursor: help
+}
+
+.hover\:bg-purple-100:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(224 231 255 / var(--tw-bg-opacity));
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-300:hover {
@@ -787,18 +954,14 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:text-gray-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 
-.active\:bg-indigo-200:active {
+.active\:bg-purple-200:active {
   --tw-bg-opacity: 1;
-  background-color: rgb(199 210 254 / var(--tw-bg-opacity));
+  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
 }
+
 

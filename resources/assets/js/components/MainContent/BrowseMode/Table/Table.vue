@@ -5,11 +5,11 @@
             <tr>
                 <th class="table-th-actions"
                     :title="trans('table.quick_actions')">
-                    <font-awesome-icon icon="tools" />
+                    <i class="ri-tools-line"></i>
                 </th>
                 <th class="table-th"
                     :id="struct.Field"
-                    :class="struct.Key === 'PRI' ? 'text-indigo-800' : 'text-tableHeader'"
+                    :class="struct.Key === 'PRI' ? 'text-purple-800' : 'text-tableHeader'"
                     :title="struct.Field + ' - ' + struct.Type"
                     :type="struct.Type"
                     @click="$emit('columnSelect', $event)"
@@ -24,11 +24,11 @@
             <tbody>
             <tr v-if="data" class="table-row" v-for="row in data">
                 <td class="table-td-actions" :title="trans('table.inspect_row')">
-                    <font-awesome-icon style="transform: rotate(90deg);" icon="search-plus" />&nbsp;
+                    <i class="ri-search-eye-line"></i>
                 </td>
                 <td class="ellipsis table-td"
                     :id="item ? item : ENUM.PREQUEL_UNDEFINED"
-                    :class="!item ? 'text-gray-500 italic' : 'text-gray-700'"
+                    :class="!item ? 'text-gray-200 italic' : 'text-gray-700'"
                     :title="(item ? item + ` (${trans('general.length')} ${(item + '').length})` : '' + '\nLeft click to see\nRight click to edit')"
                     :contenteditable="false"
                     @contextmenu.prevent="dataModifier($event)"
@@ -205,9 +205,10 @@ export default {
         @apply mx-10;
         @apply text-center;
         @apply cursor-pointer;
+        @apply bg-gray-100;
 
         &:hover {
-          @apply bg-tableHover;
+          @apply bg-gray-200;
         }
       }
 
@@ -220,9 +221,10 @@ export default {
         @apply text-secondary;
         @apply text-center;
         @apply cursor-pointer;
+        @apply bg-gray-100;
 
         &:hover {
-          @apply bg-tableHover;
+          @apply bg-gray-200;
           @apply border;
         }
       }
